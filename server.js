@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 mongoose.connect(db).then(() => console.log("mongoDB is connected")).catch(err => console.log(err))
-
+app.use(express.static('client/public'));
 app.use(passport.initialize())
  require('./config/passport.js')(passport);
 
