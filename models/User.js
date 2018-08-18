@@ -20,7 +20,7 @@ const UserSchema = new Schema({
   },
   wallet: {
     type: String,
-    required: true
+    required: false 
   },
   date: {
     type: Date,

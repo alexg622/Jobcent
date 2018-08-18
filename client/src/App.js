@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route} from 'react-router-dom'
 import './App.css';
 import jwt_decode from 'jwt-decode'
 import Login from './components/Login'
+import Register from './components/register'
 import setAuthToken from './utils/set_auth_token'
 
 if(localStorage.jwtToken) {
@@ -20,7 +21,8 @@ class App extends Component {
       <Provider store={ store }>
         <Router>
           <div className="App">
-            <Route exact path="/login" component={Login}/> 
+            <Route exact path="/login" component={Login}/>
+            <Route exact path="/register" component={Register}/>
           </div>
         </Router>
       </Provider>
