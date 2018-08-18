@@ -5,22 +5,25 @@ const jwt = require('jsonwebtoken')
 const passport = require('passport')
 const User = require('../../models/User')
 const keys = require('../../config/keys')
-
-router.get('/test', (req, res) => res.json({msg: "working"}))
-
-
-
+const SDK = require('../../SDK/source/index.js');
+const ncentSDK = new SDK();
+router.get('/test', (req, res) => res.json({msg: "working"}));
 
 router.post('/register', (req, res) => {
   console.log("here");
+  const wallet = ncentSDK.createWalletAddress();
+  // console.log(wallet);
+  // console.log(wallet.publicKey());
+  // console.log(wallet.secret());
+
   const newUser = new User({
     name: req.body.name,
     email: req.body.email,
     password: req.body.password,
-    wallet: req.body.wallet,
+    wallet: wallet.publicKey(),
     company: req.body.company
   })
-  console.log(newUser);
+  // console.log(newUser);
 
   bcrypt.genSalt(10, (err, salt) => {
         bcrypt.hash(newUser.password, salt, (err, hash) => {
