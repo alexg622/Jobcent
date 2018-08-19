@@ -6,8 +6,10 @@ const jwt = require('jsonwebtoken')
 const db = require('./config/keys').mongoURI
 const path = require('path')
 const app = express()
-const users = require('./routes/api/users')
+const cors = require('cors');
+const users = require('./routes/api/users');
 
+app.use(cors());
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 

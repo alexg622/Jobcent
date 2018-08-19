@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { ncentSDK } from '../../SDK/source/index';
+const ncentSDK = require('ncent-sdk-public');
 
 class Wallet extends React.Component {
 
@@ -18,7 +18,7 @@ class Wallet extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  let sdk = ncentSDK();
+  let sdk = new ncentSDK();
   let wallet = null;
   const onResolve = (response) => {
     wallet = response;
