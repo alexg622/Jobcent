@@ -20,7 +20,7 @@ p, form, fieldset, label, input, textarea, span, article, footer, time, small {
   height: 60px;
   justify-content: space-between;
   display: flex;
-  border-bottom: 2px solid black; 
+  border-bottom: 2px solid black;
 }
 
 .no-auth-links {
@@ -32,6 +32,25 @@ p, form, fieldset, label, input, textarea, span, article, footer, time, small {
   font-size: 20px;
   color: #119a93;
   transition: 1s;
+}
+
+.logout {
+  border-right: 1px solid black;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  padding-right: 12px;
+  font-size: 20px;
+  color: #119a93;
+  transition: color 1s;
+}
+
+.logout:hover {
+  color: orange;
+}
+
+.logo:hover {
+  color: orange;
 }
 
 .login {
@@ -67,6 +86,7 @@ p, form, fieldset, label, input, textarea, span, article, footer, time, small {
   padding-left: 6px;
   color: #119a93;
   transition: color 1s;
+  padding-left: 10px; 
 }
 
 logo:hover {

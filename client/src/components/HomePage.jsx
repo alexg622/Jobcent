@@ -9,8 +9,10 @@ class HomePage extends React.Component {
 
     render(){
       return (
-        <div>
-          Hi
+        <div className="container">
+          <div className = "background-image">
+            <div className="title">Find your next incentive</div>
+          </div>
         </div>
       )
     }

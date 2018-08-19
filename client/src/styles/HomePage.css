@@ -1,0 +1,21 @@
+
+.background-image{
+  background-image: url("https://cdn-images-1.medium.com/max/2000/1*4dPKduf_2PBA_Gbvsj3iEg.png");
+  background-size: auto;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.container {
+  /* display: flex; */
+  /* justify-content: center; */
+  height: 100vh;
+  width: 100vw;
+}
+
+.title {
+  z-index: 9999;
+  position: absolute;
+  color: red;
+}
