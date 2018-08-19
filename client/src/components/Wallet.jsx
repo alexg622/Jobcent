@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-const ncentSDK = require('ncent-sdk-public');
+// const ncentSDK = require('ncent-sdk-public');
 
 class Wallet extends React.Component {
 
@@ -18,16 +18,16 @@ class Wallet extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  let sdk = new ncentSDK();
+  // let sdk = new ncentSDK();
   let wallet = null;
-  const onResolve = (response) => {
-    wallet = response;
-  };
-
-  const onReject = (error) => {
-    console.log(error);
-  };
-  sdk.getAllBalances(state.auth.user.wallet, onResolve, onReject);
+  // const onResolve = (response) => {
+  //   wallet = response;
+  // };
+  //
+  // const onReject = (error) => {
+  //   console.log(error);
+  // };
+  // sdk.getAllBalances(state.auth.user.wallet, onResolve, onReject);
   return {
     wallet: wallet
   }
