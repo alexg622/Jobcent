@@ -1,0 +1,74 @@
+html, body, header, nav, h1, a, ul, li,
+strong, main, button, i, section, img, div, h2,
+p, form, fieldset, label, input, textarea, span, article, footer, time, small {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    color: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+    vertical-align: inherit;
+    box-sizing: inherit;
+    background: transparent;
+  }
+
+.navbar {
+  width: 100%;
+  background: #5a5466;
+  height: 60px;
+  justify-content: space-between;
+  display: flex;
+  border-bottom: 2px solid black; 
+}
+
+.no-auth-links {
+  font-family: helvetica;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 150px;
+  font-size: 20px;
+  color: #119a93;
+  transition: 1s;
+}
+
+.login {
+  border-right: 1px solid black;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  padding-right: 6px;
+  transition: color 1s;
+}
+
+.login:hover {
+  color: orange;
+}
+
+.register {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  padding-left: 6px;
+  transition: color 1s;
+}
+
+.register:hover {
+  color: orange;
+}
+
+.logo{
+  height: 100%;
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+  padding-left: 6px;
+  color: #119a93;
+  transition: color 1s;
+}
+
+logo:hover {
+  color: orange;
+}
