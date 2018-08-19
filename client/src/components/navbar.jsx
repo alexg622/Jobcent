@@ -17,8 +17,8 @@ class Navbar extends React.Component{
 
   authLinks(){
     return (
-      <div className="auth-links">
-        <Link to='/logout'>Logout</Link>
+      <div className="logout">
+        <button onClick={this.props.logoutUser}>Logout</button>
       </div>
     )
   }
@@ -26,8 +26,8 @@ class Navbar extends React.Component{
     window.props = this.props
     return(
       <div className='navbar'>
-        <div className="logo">JCent</div>
-        {this.props.isAuthenticated ? this.authLinks() : this.noAuthLinks()}
+        <Link to="/" className="logo">JCent</Link>
+        {this.props.auth.isAuthenticated ? this.authLinks() : this.noAuthLinks()}
       </div>
     )
   }
