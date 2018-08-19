@@ -8,8 +8,9 @@ import './styles/navbar.css';
 import './styles/register.css';
 import './styles/HomePage.css';
 import jwt_decode from 'jwt-decode'
-import Login from './components/Login'
 import HomePage from './components/HomePage'
+import Login from './components/Login';
+import Wallet from './components/Wallet';
 import Register from './components/register'
 import setAuthToken from './utils/set_auth_token'
 import Navbar from './components/navbar'
@@ -26,7 +27,7 @@ class App extends Component {
       <Provider store={ store }>
         <Router>
           <div className="App">
-            <Navbar />
+            <Route exact path="/wallet" component={Wallet}/>
             <Route exact path="/login" component={Login}/>
             <Route exact path="/" component={HomePage}/>
             <Route exact path="/register" component={Register}/>
