@@ -47,3 +47,9 @@ export const clearErrors = () => dispatch => (
     type: CLEAR_ERRORS
   })
 )
+
+export const logoutUser = () => dispatch => {
+  localStorage.removeItem('jwtToken')
+  setAuthToken(false)
+  dispatch(setCurrentUser({}))
+}

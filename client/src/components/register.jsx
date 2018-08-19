@@ -10,7 +10,7 @@ class Register extends React.Component{
     this.state = {
       name: "",
       email: "",
-      company: "", 
+      company: "",
       password: "",
       errors: {}
     }
@@ -51,11 +51,12 @@ class Register extends React.Component{
       })
     }
     return(
-      <div>
+      <div className="register-div">
         <ul className="errors">
           {divErrors}
         </ul>
         <form className="register-form" onSubmit={this.handleSubmit}>
+          <label className="reg-logo">JCent</label>
           <label>Name:</label>
           <input placeholder="name" type="text" value={this.state.name} onChange={this.update("name")}/>
           <label>Company:</label>
